@@ -127,6 +127,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Logging
 # https://docs.djangoproject.com/en/3.1/topics/logging/

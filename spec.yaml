@@ -1,0 +1,18 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: aggregator
+region: blr
+services:
+- http_port: 8080
+  image:
+    registry_type: DOCR
+    repository: aggregator
+    tag: latest
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: aggregator
+  routes:
+  - path: /
+  run_command: bash ./scripts/start
+  source_dir: /
