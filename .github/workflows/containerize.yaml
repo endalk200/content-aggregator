@@ -1,0 +1,29 @@
+name: Build and push docker image
+on:
+  push:
+    branches:
+      - release
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@main
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.CONTAINER_REGISTRY_TOKEN }}
+      - name: Build container image
+        run: docker build -t aggregator:latest . -f ./compose/production/django/Dockerfile
+
+      - name: Log in to DigitalOcean Container Registry with short-lived credentials
+        run: doctl registry login --expiry-seconds 1200
+
+      - name: Tag the container being built
+        run: docker tag aggregator:latest registry.digitalocean.com/aggregator/aggregator:latest
+
+      - name: Push image to DigitalOcean Container Registry
+        run: docker push registry.digitalocean.com/aggregator/aggregator:latest
+
+      # - name: Trigger deployment
+      #   run: doctl apps create-deployment ${{ secrets.APP_ID }}
