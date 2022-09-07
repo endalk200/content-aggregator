@@ -1,0 +1,15 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false,
+    "printWidth": 90,
+    "overrides": [
+        {
+            "files": ["*.test.tsx", "*.spec.tsx", "*.test.ts", "*.spec.ts"],
+            "options": {
+                "printWidth": 100
+            }
+        }
+    ]
+}
