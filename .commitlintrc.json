@@ -1,0 +1,34 @@
+{
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+        "type-enum": [
+            2,
+            "always",
+            [
+                "docs",
+                "feat",
+                "fix",
+                "perf",
+                "refactor",
+                "revert",
+                "style",
+                "config",
+                "chore",
+                "ci"
+            ]
+        ],
+        "scope-enum": [
+            2,
+            "always",
+            [
+                "api-gateway",
+                "account-svc",
+                "auth-svc",
+                "web-client",
+                "extension",
+                "mobile-client",
+                "utils"
+            ]
+        ]
+    }
+}
