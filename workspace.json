@@ -2,10 +2,11 @@
     "$schema": "./node_modules/nx/schemas/workspace-schema.json",
     "version": 2,
     "projects": {
-        "web-client": "apps/clients/web-client",
-        "web-client-e2e": "apps/clients/web-client-e2e",
         "account-svc": "apps/services/account-svc",
         "api-gateway": "apps/services/api-gateway",
-        "auth-svc": "apps/services/auth-svc"
+        "auth-svc": "apps/services/auth-svc",
+        "shared-utils": "libs/shared/utils",
+        "web-client": "apps/clients/web-client",
+        "web-client-e2e": "apps/clients/web-client-e2e"
     }
 }
