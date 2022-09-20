@@ -1,20 +1,68 @@
 {
     "root": true,
-    "ignorePatterns": ["**/*"],
-    "plugins": ["@nrwl/nx"],
+    "ignorePatterns": [
+        "**/*"
+    ],
+    "plugins": [
+        "@nrwl/nx"
+    ],
     "overrides": [
         {
-            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "files": [
+                "*.ts",
+                "*.tsx",
+                "*.js",
+                "*.jsx"
+            ],
             "rules": {
                 "@nrwl/nx/enforce-module-boundaries": [
                     "error",
                     {
-                        "enforceBuildableLibDependency": true,
+                        "enforceBuildableLibDependency": false,
                         "allow": [],
                         "depConstraints": [
                             {
-                                "sourceTag": "*",
-                                "onlyDependOnLibsWithTags": ["*"]
+                                "sourceTag": "type:app",
+                                "onlyDependOnLibsWithTags": [
+                                    "type:feat",
+                                    "type:data-access",
+                                    "type:util",
+                                    "type:shared",
+                                    "type:ui"
+                                ]
+                            },
+                            {
+                                "sourceTag": "type:feat",
+                                "onlyDependOnLibsWithTags": [
+                                    "type:feat",
+                                    "type:data-access",
+                                    "type:util",
+                                    "type:shared",
+                                    "type:ui"
+                                ]
+                            },
+                            {
+                                "sourceTag": "type:data-access",
+                                "onlyDependOnLibsWithTags": [
+                                    "type:data-access",
+                                    "type:util",
+                                    "type:shared"
+                                ]
+                            },
+                            {
+                                "sourceTag": "type:util",
+                                "onlyDependOnLibsWithTags": []
+                            },
+                            {
+                                "sourceTag": "type:shared",
+                                "onlyDependOnLibsWithTags": []
+                            },
+                            {
+                                "sourceTag": "type:ui",
+                                "onlyDependOnLibsWithTags": [
+                                    "type:shared",
+                                    "type:util"
+                                ]
                             }
                         ]
                     }
@@ -22,13 +70,23 @@
             }
         },
         {
-            "files": ["*.ts", "*.tsx"],
-            "extends": ["plugin:@nrwl/nx/typescript"],
+            "files": [
+                "*.ts",
+                "*.tsx"
+            ],
+            "extends": [
+                "plugin:@nrwl/nx/typescript"
+            ],
             "rules": {}
         },
         {
-            "files": ["*.js", "*.jsx"],
-            "extends": ["plugin:@nrwl/nx/javascript"],
+            "files": [
+                "*.js",
+                "*.jsx"
+            ],
+            "extends": [
+                "plugin:@nrwl/nx/javascript"
+            ],
             "rules": {}
         }
     ]

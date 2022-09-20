@@ -1,6 +1,6 @@
 {
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "apps/services/auth-svc/src",
+    "sourceRoot": "apps/services/url-shortner-svc/src",
     "projectType": "application",
     "targets": {
         "build": {
