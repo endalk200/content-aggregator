@@ -18,12 +18,21 @@
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
-            "outputs": ["{options.outputFile}"],
+            "outputs": [
+                "{options.outputFile}"
+            ],
             "options": {
-                "lintFilePatterns": ["apps/clients/web-client-e2e/**/*.{js,ts}"]
+                "lintFilePatterns": [
+                    "apps/clients/web-client-e2e/**/*.{js,ts}"
+                ]
             }
         }
     },
-    "tags": [],
-    "implicitDependencies": ["web-client"]
+    "tags": [
+        "type:app",
+        "scope:web-client"
+    ],
+    "implicitDependencies": [
+        "web-client"
+    ]
 }

@@ -5,12 +5,16 @@
     "targets": {
         "build": {
             "executor": "@nrwl/node:webpack",
-            "outputs": ["{options.outputPath}"],
+            "outputs": [
+                "{options.outputPath}"
+            ],
             "options": {
                 "outputPath": "dist/apps/services/auth-svc",
                 "main": "apps/services/auth-svc/src/main.ts",
                 "tsConfig": "apps/services/auth-svc/tsconfig.app.json",
-                "assets": ["apps/services/auth-svc/src/assets"]
+                "assets": [
+                    "apps/services/auth-svc/src/assets"
+                ]
             },
             "configurations": {
                 "production": {
@@ -39,19 +43,28 @@
         },
         "lint": {
             "executor": "@nrwl/linter:eslint",
-            "outputs": ["{options.outputFile}"],
+            "outputs": [
+                "{options.outputFile}"
+            ],
             "options": {
-                "lintFilePatterns": ["apps/services/auth-svc/**/*.ts"]
+                "lintFilePatterns": [
+                    "apps/services/auth-svc/**/*.ts"
+                ]
             }
         },
         "test": {
             "executor": "@nrwl/jest:jest",
-            "outputs": ["coverage/apps/services/auth-svc"],
+            "outputs": [
+                "coverage/apps/services/auth-svc"
+            ],
             "options": {
                 "jestConfig": "apps/services/auth-svc/jest.config.ts",
                 "passWithNoTests": true
             }
         }
     },
-    "tags": []
+    "tags": [
+        "type:app",
+        "scope:microservice"
+    ]
 }
