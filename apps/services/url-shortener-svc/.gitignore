@@ -1,2 +1,3 @@
-env/
-shortener.db
+__pycache__
+env
+.env
