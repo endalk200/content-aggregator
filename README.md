@@ -1,38 +1,27 @@
-# Content Aggregator
+# Create T3 App
 
-This is a monorepo containing content aggregator application that uses micro services architecture
+This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
 
-## Tech Stacks
+## What's next? How do I make an app with this?
 
-Backend frameworks:
+We try to keep this project as simple as possible, so you can start with the most basic configuration and then move on to more advanced configuration.
 
--   [NestJs](https://docs.nestjs.com/): As a backend framework for some services
--   [Django](https://docs.djangoproject.com/en/4.1/): As a backend framework for some services.
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
-Communications:
+-   [Next-Auth.js](https://next-auth.js.org)
+-   [Prisma](https://prisma.io)
+-   [TailwindCSS](https://tailwindcss.com)
+-   [tRPC](https://trpc.io)
 
--   [Kafka](https://kafka.apache.org/): For event streaming and services communication
+We also [roll our own docs](https://beta.create.t3.gg) with some summary information and links to the respective documentation.
 
-Task scheduling:
+Also checkout these awesome tutorials on `create-t3-app`.
 
--   [Celery](https://docs.celeryq.dev/en/stable/userguide/tasks.html): For task scheduling and management tool
+-   [Build a Blog With the T3 Stack - tRPC, TypeScript, Next.js, Prisma & Zod](https://www.youtube.com/watch?v=syEWlxVFUrY)
+-   [Build a Live Chat Application with the T3 Stack - TypeScript, Tailwind, tRPC](https://www.youtube.com/watch?v=dXRRY37MPuk)
+-   [Build a full stack app with create-t3-app](https://www.nexxel.dev/blog/ct3a-guestbook)
+-   [A first look at create-t3-app](https://dev.to/ajcwebdev/a-first-look-at-create-t3-app-1i8f)
 
-Database:
+## How do I deploy this?
 
--   [PostgreSQL](https://www.postgresql.org/): As main database
--   [Redis](https://redis.io/): For cache storage
--   [Prisma ORM](https://www.prisma.io/): As ORM for NestJs based services
-
-Languages:
-
--   [TypeScript](https://www.typescriptlang.org/)
--   [Python](https://www.python.org/)
-
-Tools:
-
--   [Docker](): To run services and applications
--   [Nx](): For mono repo management
-
-## Reference
-
--   [GitHub project board](https://github.com/users/endalk200/projects/11/views/1)
+Follow our deployment guides for [Vercel](https://beta.create.t3.gg/en/deployment/vercel) and [Docker](https://beta.create.t3.gg/en/deployment/docker) for more information.
